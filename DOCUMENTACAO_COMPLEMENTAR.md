@@ -2,13 +2,12 @@
 
 ## Projeto Desenvolvido com Aplicação CRUD
 
-Este projeto consiste em um **Sistema de Gerenciamento de Concessionária** desenvolvido em PHP com MySQL, implementando operações CRUD (Create, Read, Update, Delete) para gerenciamento de:
+Este projeto consiste em um **Sistema de Gerenciamento de Spa** desenvolvido em PHP com MySQL, implementando operações CRUD (Create, Read, Update, Delete) para gerenciamento de:
 
 - **Funcionários**: Cadastro, listagem, edição e exclusão de funcionários
 - **Clientes**: Cadastro, listagem, edição e exclusão de clientes
-- **Marcas**: Cadastro, listagem, edição e exclusão de marcas de veículos
-- **Modelos**: Cadastro, listagem, edição e exclusão de modelos de veículos
-- **Vendas**: Cadastro, listagem, edição e exclusão de vendas realizadas
+- **Sessões**: Cadastro, listagem, edição e exclusão de sessaos de veículos
+- **Horários marcados**: Cadastro, listagem, edição e exclusão de vendas realizadas
 
 ### Estrutura CRUD Implementada
 
@@ -466,7 +465,7 @@ INÍCIO
             INCLUIR 'editar-cliente.php'
         CASO 'salvar-cliente':
             INCLUIR 'salvar-cliente.php'
-        // ... outros casos para Marca, Modelo, Venda ...
+        // ... outros casos para Marca, sessao, Venda ...
         CASO PADRÃO:
             ESCREVA "Seja bem vindo ao sistema da berg lindo"
     FIM ESCOLHA
@@ -526,16 +525,12 @@ FIM SUBALGORITMO
 - `endereco_cliente` (VARCHAR(100))
 - `dt_nasc_cliente` (DATE)
 
-### Tabela: marca
-- `id_marca` (INT, PRIMARY KEY, AUTO_INCREMENT)
-- `nome_marca` (VARCHAR(45), NOT NULL)
-
-### Tabela: modelo
-- `id_modelo` (INT, PRIMARY KEY, AUTO_INCREMENT)
-- `nome_modelo` (VARCHAR(45), NOT NULL)
-- `cor_modelo` (VARCHAR(20))
-- `ano_modelo` (YEAR)
-- `tipo_modelo` (VARCHAR(45))
+### Tabela: 
+- `id_sessao` (INT, PRIMARY KEY, AUTO_INCREMENT)
+- `nome_sessao` (VARCHAR(45), NOT NULL)
+- `cor_sessao` (VARCHAR(20))
+- `ano_sessao` (YEAR)
+- `tipo_sessao` (VARCHAR(45))
 - `marca_id_marca` (INT, FOREIGN KEY)
 
 ### Tabela: venda
@@ -544,7 +539,7 @@ FIM SUBALGORITMO
 - `valor_venda` (DECIMAL(10,2))
 - `cliente_id_cliente` (INT, FOREIGN KEY)
 - `funcionario_id_funcionario` (INT, FOREIGN KEY)
-- `modelo_id_modelo` (INT, FOREIGN KEY)
+- `sessao_id_sessao` (INT, FOREIGN KEY)
 
 ---
 
@@ -558,6 +553,3 @@ FIM SUBALGORITMO
 
 ---
 
-**Desenvolvido por: Wamberg Gomes**  
-**Projeto: Sistema de Gerenciamento de Concessionária Berg Lindo**  
-**Data: 2025**
