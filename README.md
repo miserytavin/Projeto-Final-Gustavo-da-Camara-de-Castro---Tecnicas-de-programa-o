@@ -1,5 +1,5 @@
 📄 README.md - Sistema GuSPA
-Este documento contém os passos necessários para configurar e executar o Sistema GuSPA em seu ambiente de desenvolvimento local usando o XAMPP.
+Este documento contém os passos necessários para configurar e executar o Sistema GuSPA, um sistema de marcação de horários em um SPA ficcticio, em seu ambiente de desenvolvimento local usando o XAMPP.
 
 🛠️ Pré-requisitos
 Certifique-se de ter o XAMPP instalado em seu computador.
